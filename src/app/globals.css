@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-orange: #f97316;
+  --color-brand-orange-hover: #ea580c;
+  --color-brand-green: #16a34a;
+  --color-brand-green-hover: #15803d;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #1f2937; /* gray-800 */
+}
+
+body {
+  background-color: var(--background) !important;
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Ensure no dark-mode overrides interfere with our strict white background constraint */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff;
+    --foreground: #1f2937;
+  }
+}
